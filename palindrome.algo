@@ -1,0 +1,30 @@
+FUNCTION ispalindrome(ch: CHAR) : BOOLEAN
+VAR
+    ch :CHAR;
+    
+BEGIN
+    FOR i FROM ch[0] TO length/2 STEP step  DO
+
+        IF (ch[i] <> STRING(length-1)) THEN
+            RETURN False
+        END_IF
+        
+    END_FOR
+    
+    RETURN true ;
+END
+
+ALGORITHM palindrome
+VAR
+    ch:CHAR;
+    result: BOOLEAN;
+BEGIN
+    Read(chr);
+    result=ispalindrome(ch)
+
+    IF (result=false) THEN
+        write('ch is not palindrome')
+    ELSE
+        write('ch is palindrome')
+    END_IFF
+END
